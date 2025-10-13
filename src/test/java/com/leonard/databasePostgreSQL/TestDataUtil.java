@@ -1,54 +1,54 @@
 package com.leonard.databasePostgreSQL;
 
-import com.leonard.databasePostgreSQL.domain.Author;
-import com.leonard.databasePostgreSQL.domain.Book;
+import com.leonard.databasePostgreSQL.domain.entities.AuthorEntity;
+import com.leonard.databasePostgreSQL.domain.entities.BookEntity;
 
 public final class TestDataUtil {
     private TestDataUtil() {
     }
 
-    public static Author createTestAuthorA() {
-        return Author.builder()
+    public static AuthorEntity createTestAuthorA() {
+        return AuthorEntity.builder()
                 .name("Leonard")
                 .age(25)
                 .build();
     }
 
-    public static Author createTestAuthorB() {
-        return Author.builder()
+    public static AuthorEntity createTestAuthorB() {
+        return AuthorEntity.builder()
                 .name("Leonard3")
                 .age(5)
                 .build();
     }
 
-    public static Author createTestAuthorC() {
-        return Author.builder()
+    public static AuthorEntity createTestAuthorC() {
+        return AuthorEntity.builder()
                 .name("Leonard4")
                 .age(225)
                 .build();
     }
 
-    public static Book createTestBookA(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookA(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("1234567891")
                 .title("The Hobbit1")
-                .author( author)
+                .authorEntity(authorEntity)
                 .build();
     }
 
-    public static Book createTestBookB(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookB(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("1234567892")
                 .title("The Hobbit2")
-                .author(author)
+                .authorEntity(authorEntity)
                 .build();
     }
 
-    public static Book createTestBookC(final Author author) {
-        return Book.builder()
+    public static BookEntity createTestBookC(final AuthorEntity authorEntity) {
+        return BookEntity.builder()
                 .isbn("1234567893")
                 .title("The Hobbit3")
-                .author(author)
+                .authorEntity(authorEntity)
                 .build();
     }
 }
