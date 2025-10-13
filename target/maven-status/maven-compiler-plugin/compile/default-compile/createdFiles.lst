@@ -1,0 +1,7 @@
+com\leonard\databasePostgreSQL\DatabasePostgreSqlApplication.class
+com\leonard\databasePostgreSQL\domain\Book.class
+com\leonard\databasePostgreSQL\domain\Book$BookBuilder.class
+com\leonard\databasePostgreSQL\repositories\BookRepository.class
+com\leonard\databasePostgreSQL\domain\Author$AuthorBuilder.class
+com\leonard\databasePostgreSQL\domain\Author.class
+com\leonard\databasePostgreSQL\repositories\AuthorRepository.class

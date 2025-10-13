@@ -1,0 +1,4 @@
+com\leonard\databasePostgreSQL\repositories\AuthorRepositoryIntegrationTests.class
+com\leonard\databasePostgreSQL\TestDataUtil.class
+com\leonard\databasePostgreSQL\repositories\BookRepositoryIntegrationTests.class
+com\leonard\databasePostgreSQL\DatabasePostgreSqlApplicationTests.class
