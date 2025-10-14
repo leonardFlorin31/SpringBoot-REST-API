@@ -1,5 +1,12 @@
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\config\MapperConfig.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\controllers\AuthorController.java
 C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\DatabasePostgreSqlApplication.java
-C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\domain\Author.java
-C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\domain\Book.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\domain\dto\AuthorDto.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\domain\entities\AuthorEntity.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\domain\entities\BookEntity.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\mappers\impl\AuthorMapperImpl.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\mappers\Mapper.java
 C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\repositories\AuthorRepository.java
 C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\repositories\BookRepository.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\services\AuthorService.java
+C:\Users\leofl\Desktop\java\databasePostgreSQL\src\main\java\com\leonard\databasePostgreSQL\services\impl\AuthorServiceImpl.java

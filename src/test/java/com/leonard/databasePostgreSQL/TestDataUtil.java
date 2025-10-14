@@ -1,10 +1,15 @@
 package com.leonard.databasePostgreSQL;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.leonard.databasePostgreSQL.domain.entities.AuthorEntity;
 import com.leonard.databasePostgreSQL.domain.entities.BookEntity;
 
 public final class TestDataUtil {
+
+    private static final ObjectMapper objectMapper = new ObjectMapper();
     private TestDataUtil() {
+
     }
 
     public static AuthorEntity createTestAuthorA() {
@@ -50,5 +55,12 @@ public final class TestDataUtil {
                 .title("The Hobbit3")
                 .authorEntity(authorEntity)
                 .build();
+    }
+
+    public static String getAuthorJson() throws JsonProcessingException {
+        AuthorEntity testAuthorA = TestDataUtil.createTestAuthorA();
+        testAuthorA.setId(null);
+        String authorJson = objectMapper.writeValueAsString(testAuthorA);
+        return authorJson;
     }
 }

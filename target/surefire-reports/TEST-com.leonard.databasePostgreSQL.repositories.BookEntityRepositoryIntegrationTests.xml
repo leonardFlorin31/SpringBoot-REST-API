@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.leonard.databasePostgreSQL.DatabasePostgreSqlApplicationTests" time="0.444" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests" time="1.319" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -47,7 +47,7 @@
     <property name="localRepository" value="C:\Users\leofl\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\leofl\AppData\Local\Temp\"/>
-    <property name="com.zaxxer.hikari.pool_number" value="2"/>
+    <property name="com.zaxxer.hikari.pool_number" value="11"/>
     <property name="java.version" value="17.0.16"/>
     <property name="user.dir" value="C:\Users\leofl\Desktop\java\databasePostgreSQL"/>
     <property name="os.arch" value="amd64"/>
@@ -64,9 +64,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="contextLoads" classname="com.leonard.databasePostgreSQL.DatabasePostgreSqlApplicationTests" time="0.005">
-    <system-out><![CDATA[2025-10-14T11:32:14.929+03:00  INFO 25072 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.leonard.databasePostgreSQL.DatabasePostgreSqlApplicationTests]: DatabasePostgreSqlApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-10-14T11:32:14.936+03:00  INFO 25072 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.leonard.databasePostgreSQL.DatabasePostgreSqlApplication for test class com.leonard.databasePostgreSQL.DatabasePostgreSqlApplicationTests
+  <testcase name="testThatBookCanBeUpdated" classname="com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests" time="0.028">
+    <system-out><![CDATA[2025-10-14T11:32:18.130+03:00  INFO 25072 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests]: BookEntityRepositoryIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-10-14T11:32:18.132+03:00  INFO 25072 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.leonard.databasePostgreSQL.DatabasePostgreSqlApplication for test class com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -77,28 +77,145 @@
 
  :: Spring Boot ::                (v3.5.6)
 
-2025-10-14T11:32:14.964+03:00  INFO 25072 --- [           main] c.l.d.DatabasePostgreSqlApplicationTests : Starting DatabasePostgreSqlApplicationTests using Java 17.0.16 with PID 25072 (started by leofl in C:\Users\leofl\Desktop\java\databasePostgreSQL)
-2025-10-14T11:32:14.964+03:00  INFO 25072 --- [           main] c.l.d.DatabasePostgreSqlApplicationTests : No active profile set, falling back to 1 default profile: "default"
-2025-10-14T11:32:15.082+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-14T11:32:15.099+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
-2025-10-14T11:32:15.160+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2025-10-14T11:32:15.162+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:testdb user=SA
-2025-10-14T11:32:15.163+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2025-10-14T11:32:15.179+03:00  INFO 25072 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-14T11:32:15.182+03:00  INFO 25072 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-14T11:32:15.198+03:00  INFO 25072 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-14T11:32:15.200+03:00  INFO 25072 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+2025-10-14T11:32:18.157+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Starting BookEntityRepositoryIntegrationTests using Java 17.0.16 with PID 25072 (started by leofl in C:\Users\leofl\Desktop\java\databasePostgreSQL)
+2025-10-14T11:32:18.157+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T11:32:18.237+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-14T11:32:18.247+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2025-10-14T11:32:18.284+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-10-14T11:32:18.286+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection conn50: url=jdbc:h2:mem:testdb user=SA
+2025-10-14T11:32:18.286+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-10-14T11:32:18.296+03:00  INFO 25072 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-14T11:32:18.299+03:00  INFO 25072 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-14T11:32:18.307+03:00  INFO 25072 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-14T11:32:18.308+03:00  INFO 25072 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-10-14T11:32:15.233+03:00  INFO 25072 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-14T11:32:15.240+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-14T11:32:15.287+03:00  WARN 25072 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-14T11:32:15.365+03:00  INFO 25072 --- [           main] c.l.d.DatabasePostgreSqlApplicationTests : Started DatabasePostgreSqlApplicationTests in 0.425 seconds (process running for 6.266)
+2025-10-14T11:32:18.335+03:00  INFO 25072 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-14T11:32:18.340+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:18.366+03:00  WARN 25072 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-14T11:32:18.424+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Started BookEntityRepositoryIntegrationTests in 0.288 seconds (process running for 9.324)
+2025-10-14T11:32:18.447+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:18.448+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2025-10-14T11:32:18.453+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="testThatBookCanBeCreatedAndRecalled" classname="com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests" time="0.013">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-14T11:32:18.468+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Starting BookEntityRepositoryIntegrationTests using Java 17.0.16 with PID 25072 (started by leofl in C:\Users\leofl\Desktop\java\databasePostgreSQL)
+2025-10-14T11:32:18.468+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T11:32:18.549+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-14T11:32:18.559+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2025-10-14T11:32:18.592+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2025-10-14T11:32:18.594+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection conn53: url=jdbc:h2:mem:testdb user=SA
+2025-10-14T11:32:18.594+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2025-10-14T11:32:18.604+03:00  INFO 25072 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-14T11:32:18.607+03:00  INFO 25072 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-14T11:32:18.616+03:00  INFO 25072 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-14T11:32:18.617+03:00  INFO 25072 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-14T11:32:18.640+03:00  INFO 25072 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-14T11:32:18.644+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:18.671+03:00  WARN 25072 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-14T11:32:18.723+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Started BookEntityRepositoryIntegrationTests in 0.268 seconds (process running for 9.624)
+2025-10-14T11:32:18.735+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:18.737+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2025-10-14T11:32:18.738+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="testThatBookCanBeDeleted" classname="com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests" time="0.045">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-14T11:32:18.758+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Starting BookEntityRepositoryIntegrationTests using Java 17.0.16 with PID 25072 (started by leofl in C:\Users\leofl\Desktop\java\databasePostgreSQL)
+2025-10-14T11:32:18.759+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T11:32:18.870+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-14T11:32:18.883+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2025-10-14T11:32:18.921+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2025-10-14T11:32:18.923+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection conn55: url=jdbc:h2:mem:testdb user=SA
+2025-10-14T11:32:18.924+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2025-10-14T11:32:18.940+03:00  INFO 25072 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-14T11:32:18.944+03:00  INFO 25072 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-14T11:32:18.951+03:00  INFO 25072 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-14T11:32:18.953+03:00  INFO 25072 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-14T11:32:18.981+03:00  INFO 25072 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-14T11:32:18.986+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:19.012+03:00  WARN 25072 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-14T11:32:19.068+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Started BookEntityRepositoryIntegrationTests in 0.328 seconds (process running for 9.969)
+2025-10-14T11:32:19.083+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:19.084+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2025-10-14T11:32:19.113+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+]]></system-out>
+  </testcase>
+  <testcase name="testThatMultipleBooksCanBeCreatedAndRecalled" classname="com.leonard.databasePostgreSQL.repositories.BookEntityRepositoryIntegrationTests" time="0.03">
+    <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.6)
+
+2025-10-14T11:32:19.129+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Starting BookEntityRepositoryIntegrationTests using Java 17.0.16 with PID 25072 (started by leofl in C:\Users\leofl\Desktop\java\databasePostgreSQL)
+2025-10-14T11:32:19.129+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : No active profile set, falling back to 1 default profile: "default"
+2025-10-14T11:32:19.210+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-14T11:32:19.224+03:00  INFO 25072 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2025-10-14T11:32:19.275+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2025-10-14T11:32:19.276+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection conn58: url=jdbc:h2:mem:testdb user=SA
+2025-10-14T11:32:19.277+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2025-10-14T11:32:19.287+03:00  INFO 25072 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-14T11:32:19.290+03:00  INFO 25072 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-14T11:32:19.297+03:00  INFO 25072 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-14T11:32:19.298+03:00  INFO 25072 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-11)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-14T11:32:19.324+03:00  INFO 25072 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-14T11:32:19.327+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:19.351+03:00  WARN 25072 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-14T11:32:19.414+03:00  INFO 25072 --- [           main] d.r.BookEntityRepositoryIntegrationTests : Started BookEntityRepositoryIntegrationTests in 0.299 seconds (process running for 10.315)
+2025-10-14T11:32:19.443+03:00  INFO 25072 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-14T11:32:19.445+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2025-10-14T11:32:19.445+03:00  INFO 25072 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
 ]]></system-out>
   </testcase>
 </testsuite>
