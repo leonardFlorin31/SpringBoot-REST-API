@@ -17,12 +17,12 @@ public class AuthorMapperImpl implements Mapper<AuthorEntity, AuthorDto> {
     }
 
     @Override
-    public AuthorDto mapto(AuthorEntity authorEntity) {
+    public AuthorDto mapTo(AuthorEntity authorEntity) {
        return modelMapper.map(authorEntity, AuthorDto.class);
     }
 
     @Override
-    public AuthorEntity mapfrom(AuthorDto authorDto) {
+    public AuthorEntity mapFrom(AuthorDto authorDto) {
         return modelMapper.map(authorDto, AuthorEntity.class);
     }
 }

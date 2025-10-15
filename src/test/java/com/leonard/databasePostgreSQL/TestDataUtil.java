@@ -2,6 +2,8 @@ package com.leonard.databasePostgreSQL;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.leonard.databasePostgreSQL.domain.dto.AuthorDto;
+import com.leonard.databasePostgreSQL.domain.dto.BookDto;
 import com.leonard.databasePostgreSQL.domain.entities.AuthorEntity;
 import com.leonard.databasePostgreSQL.domain.entities.BookEntity;
 
@@ -30,6 +32,14 @@ public final class TestDataUtil {
         return AuthorEntity.builder()
                 .name("Leonard4")
                 .age(225)
+                .build();
+    }
+
+    public static BookDto createTestBookDtoA(final AuthorDto authorDto) {
+        return BookDto.builder()
+                .isbn("1234567891")
+                .title("The Hobbit1")
+                .author(authorDto)
                 .build();
     }
 

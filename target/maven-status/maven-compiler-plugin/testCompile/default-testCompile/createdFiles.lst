@@ -1,5 +1,6 @@
 com\leonard\databasePostgreSQL\repositories\AuthorEntityRepositoryIntegrationTests.class
-com\leonard\databasePostgreSQL\DatabasePostgreSqlApplicationTests.class
 com\leonard\databasePostgreSQL\controllers\AuthorControllerIntegrationTests.class
+com\leonard\databasePostgreSQL\RestApiApplicationTests.class
 com\leonard\databasePostgreSQL\repositories\BookEntityRepositoryIntegrationTests.class
 com\leonard\databasePostgreSQL\TestDataUtil.class
+com\leonard\databasePostgreSQL\controllers\BookControllerIntegrationTests.class

@@ -1,9 +1,9 @@
 package com.leonard.databasePostgreSQL.mappers;
 
 public interface Mapper <A, B> {
-    B mapto(A a);
+    B mapTo(A a);
 
-    A mapfrom(B b);
+    A mapFrom(B b);
 
 
 }
