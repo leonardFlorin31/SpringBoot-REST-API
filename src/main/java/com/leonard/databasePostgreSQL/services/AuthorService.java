@@ -4,10 +4,15 @@ import com.leonard.databasePostgreSQL.domain.entities.AuthorEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface AuthorService {
-    AuthorEntity createAuthor(AuthorEntity authorEntity);
+    AuthorEntity saveAuthor(AuthorEntity authorEntity);
 
     List<AuthorEntity> findAll();
+
+    Optional<AuthorEntity> findOne(Long id);
+
+    boolean isExists(Long id);
 }
