@@ -44,16 +44,16 @@ public final class TestDataUtil {
 
     public static BookDto createTestBookDtoA(final AuthorDto authorDto) {
         return BookDto.builder()
-                .isbn("1234567891")
-                .title("The Hobbit1")
+                .isbn("1234567")
+                .title("dto")
                 .author(authorDto)
                 .build();
     }
 
     public static BookEntity createTestBookA(final AuthorEntity authorEntity) {
         return BookEntity.builder()
-                .isbn("1234567891")
-                .title("The Hobbit1")
+                .isbn("123456789111")
+                .title("entity")
                 .authorEntity(authorEntity)
                 .build();
     }

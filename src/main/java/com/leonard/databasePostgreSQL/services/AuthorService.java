@@ -1,5 +1,6 @@
 package com.leonard.databasePostgreSQL.services;
 
+import com.leonard.databasePostgreSQL.domain.dto.AuthorDto;
 import com.leonard.databasePostgreSQL.domain.entities.AuthorEntity;
 import org.springframework.stereotype.Repository;
 
@@ -15,4 +16,7 @@ public interface AuthorService {
     Optional<AuthorEntity> findOne(Long id);
 
     boolean isExists(Long id);
+
+    AuthorEntity partialUpdate(Long id, AuthorEntity authorEntity);
+
 }

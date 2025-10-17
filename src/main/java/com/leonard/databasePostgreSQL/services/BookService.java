@@ -8,9 +8,11 @@ import java.util.Optional;
 
 @Repository
 public interface BookService {
-    BookEntity createBook(String isbn, BookEntity bookEntity);
+    BookEntity createUpdateBook(String isbn, BookEntity bookEntity);
 
     List<BookEntity> findAll();
 
     Optional<BookEntity> findOne(String isbn);
+
+    boolean isExist(String isbn);
 }
